@@ -21,7 +21,7 @@ public class MainPanel extends JPanel {
 		for(int i = 0; i < r.startingConfiguration.length; i++) {
 			for(int j = 0; j < r.startingConfiguration[i].length; j++) {
 				if(r.startingConfiguration[i][j] == TileType.monsterSpawn) {
-					enemies.add(rand.nextInt(3) == 0 ? new Phantom(i * 72, j * 72) : new Monster(i * 72, j * 72, rand.nextInt(4)+1));
+					enemies.add(rand.nextInt(3) == 0 ? new Phantom(i * 72, j * 72) : new Monster(i * 72 + 6, j * 72 + 6, rand.nextInt(4)+1));
 					objects.add(new Tile(i * 72, j * 72, 72, 72, Util.getImageForTileType(TileType.air), TileType.air));
 				} else
 					objects.add(new Tile(i * 72, j * 72, 72, 72, Util.getImageForTileType(r.startingConfiguration[i][j]), r.startingConfiguration[i][j]));
