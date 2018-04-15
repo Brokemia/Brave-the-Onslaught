@@ -74,7 +74,7 @@ public class Player implements KeyListener {
 			g.drawImage(Util.getImage("assets/qtSlider.png"), x + width + 3, y + (int)(((double)TIME_TO_QUICK-quicktimeAttack)/TIME_TO_QUICK * height), null);
 		}
 		
-		if(gems >= speed) {
+		if(gems >= 5) {
 			g.setColor(new Color(0, 255, 0, 120));
 			g.fillRect(0, 0, 72*11, 72*11);
 			g.setColor(Color.WHITE);
