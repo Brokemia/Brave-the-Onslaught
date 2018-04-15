@@ -27,7 +27,6 @@ public class Player implements KeyListener {
 	
 	public Image img = Util.getImage("assets/player.png");
 	
-	
 	public void draw(Graphics2D g) {
 		AffineTransform tx = AffineTransform.getRotateInstance(angle, 36, 36);
 		AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
@@ -75,11 +74,14 @@ public class Player implements KeyListener {
 		}
 		
 		if(gems >= 5) {
+			if(!Main.thrd.stopwatch.isStopped())
+				Main.thrd.stopwatch.stop();
 			g.setColor(new Color(0, 255, 0, 120));
 			g.fillRect(0, 0, 72*11, 72*11);
 			g.setColor(Color.WHITE);
 			g.setFont(new Font(Font.SERIF, Font.PLAIN, 30));
 			g.drawString("You have escaped the dungeon and will live to see another day!", 36*11 - g.getFontMetrics().stringWidth("You have escaped the dungeon and will live to see another day!")/2, 400);
+			g.drawString("Time: " + Main.thrd.stopwatch.getTime(), 36*11 - g.getFontMetrics().stringWidth("Time: " + Main.thrd.stopwatch.getTime())/2, 500);
 		}
 	}
 	

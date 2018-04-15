@@ -2,8 +2,12 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import org.apache.commons.lang3.time.StopWatch;
+
 
 public class GameThread extends Thread {
+	
+	public StopWatch stopwatch;
 	
 	@Override
 	public void run() {
@@ -19,6 +23,8 @@ public class GameThread extends Thread {
 			}
 		}
 		
+		stopwatch = new StopWatch();
+		stopwatch.start();
 		Main.panel.loadRoom(RoomManager.rooms[0][0]);
 		while(true) {
 			BufferedImage img = new BufferedImage(900, 900, BufferedImage.TYPE_INT_ARGB);
