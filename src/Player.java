@@ -44,7 +44,7 @@ public class Player implements KeyListener {
 		g.drawImage(op.filter((BufferedImage)(damageCooldown > 0 ? buf1 : bufOK), null), x, y, w, h, null);
 		if(weaponTimer > 0) {
 			g.rotate(weaponTimer * 12, x + 30, y + 30);
-			g.drawImage(Util.getImage("assets/attack.png"), x - 5, y - 5, 100, 100, null);
+			g.drawImage(Util.getImage("assets/attack.png"), x - 5, y - 5, 70, 70, null);
 			g.rotate(-weaponTimer * 12, x + 30, y + 30);
 		}
 		if(potions > 0) {
