@@ -12,4 +12,4 @@ press Shift to use one and fully restore your health, which is in the top-right
 Collect 5 gems to win the game and escape the dungeon!
 
 # Fastest Times
-Ricky: 4:26
+Ricky: 3:43
